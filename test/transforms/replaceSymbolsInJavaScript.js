@@ -246,7 +246,7 @@ describe('transforms/replaceSymbolsInJavaScript', function () {
             2 + 2;
             /* jshint ignore:end */
         }, passError(done, function (parseTree) {
-            var binOp = parseTree.body[0].body;
+            var binOp = parseTree.body[0].expression;
             expect(binOp.type, 'to equal', 'BinaryExpression');
             expect(binOp.left, 'not to be', binOp.right);
             done();

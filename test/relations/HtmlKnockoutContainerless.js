@@ -1,7 +1,6 @@
 /*global describe, it*/
 var expect = require('../unexpected-with-plugins'),
-    AssetGraph = require('../../lib'),
-    uglifyJs = AssetGraph.JavaScript.uglifyJs;
+    AssetGraph = require('../../lib');
 
 describe('relations/HtmlKnockoutContainerless', function () {
     it('should handle a test case with existing <!-- ko ... --> comments', function (done) {

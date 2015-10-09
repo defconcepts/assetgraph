@@ -1,7 +1,6 @@
 /*global describe, it*/
 var expect = require('../unexpected-with-plugins'),
-    AssetGraph = require('../../lib'),
-    uglifyJs = AssetGraph.JavaScript.uglifyJs;
+    AssetGraph = require('../../lib');
 
 describe('relations/HtmlParamsAttribute', function () {
     it('should handle a simple test case', function (done) {

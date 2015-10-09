@@ -28,7 +28,7 @@
     "cssmin": "0.3.1",
     "cssom-papandreou": "0.3.0-patch2",
     "deep-extend": "0.2.11",
-    "esanimate": "1.0.0",
+    "esanimate": "1.0.2",
     "escodegen": "1.7.0",
     "esmangle": "1.0.1",
     "esprima": "2.6.0",

@@ -347,4 +347,15 @@ describe('assets/JavaScript', function () {
             })
             .run(done);
     });
+
+    it('should attempt to fold constants in require calls to string', function (done) {
+        new AssetGraph({root: __dirname + '/../../testdata/assets/JavaScript/'})
+            .loadAssets('foldableConstants.js')
+            .populate()
+            .queue(function (assetGraph) {
+                var asset = assetGraph.findAssets({type: 'JavaScript'})[0];
+                expect(asset.text, 'to match', /require\(\['foobar'/);
+                expect(asset.text, 'to match', /require\(\['http:\/\/example.com\/foo.js'/);
+            }).run(done);
+    });
 });
